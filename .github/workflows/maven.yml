@@ -46,11 +46,11 @@ jobs:
     - name: Artifact upload
       uses: actions/upload-artifact@v3
       with:
-        name: arquillian
-        path: ~/.m2/repository/org/jboss
+        name: arquillian-bom
+        path: ~/.m2/repository/org/jboss/arquillian
 
     - name: List artifacts
-      run: ls -R ~/.m2/repository/
+      run: ls -R ~/.m2/repository/org/jboss
 
   #arquillian-build-jdk11:
    # name: Integration - JDK 11
