@@ -34,7 +34,7 @@ jobs:
         cache: maven
         
     - name: Build with Maven
-      run: mvn clean -B verify
+      run: mvn clean -B install
 
     - name: Version save
       id: arq-version
@@ -46,8 +46,8 @@ jobs:
     - name: Artifact upload
       uses: actions/upload-artifact@v3
       with:
-        name: arquillian-container
-        path: ~/.m2/repository/org/jboss/arquillian
+        name: arquillian
+        path: ~/.m2/repository/org/jboss/
 
     - name: List artifacts
       run: ls -R ~/.m2/repository/org/jboss
