@@ -46,7 +46,7 @@ jobs:
     - name: Artifact upload
       uses: actions/upload-artifact@v3
       with:
-        name: arquillian-bom
+        name: arquillian-container
         path: ~/.m2/repository/org/jboss/arquillian
 
     - name: List artifacts
