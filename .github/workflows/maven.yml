@@ -40,7 +40,7 @@ jobs:
       id: arq-version
       run: |
         VERSION=$(mvn -q -Dexec.executable=echo -Dexec.args='${project.version}' --non-recursive exec:exec)
-        echo "{SNAPSHOT_VERSION}={$VERSION}" >> $GITHUB_OUTPUT
+        echo "::set-output name=SNAPSHOT_VERSION::$VERSION"
         echo "Arquillian version: $VERSION"
 
     - name: Artifact upload
